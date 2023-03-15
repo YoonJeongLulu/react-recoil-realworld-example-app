@@ -14,6 +14,8 @@ import Article from './pages/Article';
 import Profile from './pages/Profile';
 import EditArticle from './pages/EditArticle';
 import NewArticle from './pages/NewArticle';
+import MyPage from './pages/MyPage';
+import Board from './pages/Board';
 
 import { getUser } from './api/user';
 import { isLoggedInAtom, userAtom } from './atom';
@@ -67,6 +69,8 @@ const App = () => {
           <Route path="/editor/:URLSlug" element={<EditArticle />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/profile/:userId/*" element={<Profile />} />
+          <Route path="/board" element={<Board />} />
+          <Route path="/mypage" element={<MyPage />} />
           <Route path="*" element={<Navigate to="/" replace={true} />} />
         </Routes>
         <Footer />
